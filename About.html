@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caparico – Responsive Food Website Project by Vineet</title>
+    <meta name="description" content="Caparico is a responsive food website project showcasing front-end web development skills in HTML, CSS, and JavaScript. Created by vineet to demonstrate expertise in UI/UX design and mobile-friendly websites.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/food logo.png" alt="caparico logo">
+                Caparico
+            </div>
+        
+        <!--navlinks-->
+        <nav>
+            
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">recipes</a></li>
+            <li><a href="index.html#about" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <button id="darktoggle">🌙 Dark Mode</button>
+        </ul>
+        <div class="hamburger"><i class="fa fa-bars"></i></div>
+    </nav>
+    </div>
+    </header>
+    <section class="about-section"></section>
+    <div class="about-story">
+      <h1>Our story</h1>
+      <p>Caparico is a responsive food website project created to demonstrate strong front-end web development skills. It highlights expertise in HTML, CSS, and JavaScript, including features like dark mode, a responsive navigation bar, and optimized mobile layouts.</p>
+    </div>
+    <div class="about-Creator">
+        <h2>About the creator</h2>
+        <p>Hi! I’m Vineet, a passionate learner building a career in web development and UI/UX design. This project was built as part of my portfolio to showcase my ability to design and develop functional, visually appealing websites.</p>
+    </div>
+    <div class="about-tech-used">
+        <h2>Technologies Used</h2>
+        <p>This project was built with HTML5, CSS3, JavaScript, and responsive design principles to ensure fast loading times and seamless user experiences on all devices. Resources used: icons by Font Awesome, images from Unsplash, and content research with ChatGPT.</p>
+    </div>
+    <script>
+         const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+       const darkBtn = document.getElementById("darktoggle");
+
+      if (localStorage.getItem("theme") ==="dark") {
+        document.documentElement.classList.add("dark");
+        darkBtn.textContent = "☀️ Light Mode";
+      }
+
+       darkBtn.onclick = function() {
+            document.documentElement.classList.toggle("dark");
+
+          if ( document.documentElement.classList.contains("dark")) {
+            darkBtn.textContent = "☀️ Light Mode";
+            localStorage.setItem("theme","dark");
+          } else {
+            darkBtn.textContent = "🌙 Dark Mode";
+            localStorage.setItem("theme","light");
+          }
+        };
+    </script>
+</body>
+</html>

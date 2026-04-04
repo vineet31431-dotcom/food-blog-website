@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caparico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head> 
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/food logo.png" alt="caparico logo">
+                Caparico
+            </div>
+        
+        <!--navlinks-->
+        <nav>
+            
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="recipes.html">recipes</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <button id="darktoggle">🌙 Dark Mode</button>
+        </ul>
+        <div class="hamburger"><i class="fa fa-bars"></i></div>
+        
+    </nav>
+    </div>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Caparico</h1>
+        <p>Your Daily dose of tasty recipes</p>
+        <a href="#recipes" class="btn">Explore Recipes</a>
+        <p class="tagline">Discover flavors, cook with love</p>
+    </section>
+    <section class="recipes" id="recipes">
+        <h2 class="recipe-intro">Featured Recipes</h2>
+        <p class="recipe-subtitle"> Handpicked recipes for every occasions</p>
+      <div class="recipe-grid">
+    <article class="recipes-card">
+        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pasta" loading="lazy">
+        <h3>Delicious Pasta</h3>
+        <p>A quick and tasty Italian pasta recipe</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+        </article>
+        <article class="recipes-card">
+        <img src="https://plus.unsplash.com/premium_photo-1676047258557-de72954cf17c?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2FsYWR8ZW58MHx8MHx8fDA%3D" loading="lazy" alt="Salad">
+        <h3>Fresh Salad</h3>
+        <p>Healthy and refreshing green salad</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+        </article>
+        <article class="recipes-card">
+        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVyZ2VyfGVufDB8fDB8fHww" alt="Burger" loading="lazy">
+        <h3>Chessy Burger</h3>
+        <p>Juicy burger with melted cheese</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+    </article>
+    <article class="recipes-card">
+        <img src="https://t3.ftcdn.net/jpg/05/77/79/92/360_F_577799201_gaJt7cQBBtwnwPWMoyP7eZpKfTP8huh8.jpg" alt="Paneer Tikka" loading="lazy">
+        <h3>Paneer masala</h3>
+        <p>Grilled paneer cubes marinated in smoky Indian spices.</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+    </article><article class="recipes-card">
+        <img src="https://www.tasteofhome.com/wp-content/uploads/2025/07/Best-Lasagna_EXPS_ATBBZ25_36333_DR_07_01_2b.jpg" alt="Lasagna" loading="lazy">
+        <h3>Lasagna</h3>
+        <p>Cheesy pasta layers baked with rich tomato sauce.</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+    </article><article class="recipes-card">
+        <img src="images/biryani.png" alt="Chicken Biryani" loading="lazy">
+        <h3>Chicken Biryani</h3>
+        <p>Aromatic rice layered with spiced chicken and herbs.</p>
+        <a href="recipes.html" class="card-btn">view recipes</a>
+    </article>
+    </div>
+    <article id="about">
+        <h2>About Caparico</h2>
+        <p>Caparico is your go-to food blog for <strong>simple, tasty, and healthy recipes</strong> that anyone can cook.</p>
+    <p>From Indian classics to global favorites, we bring you <strong>tried & tested recipes</strong> with easy instructions.</p>
+    <p>Whether you're a beginner or a seasoned cook, you’ll always find something to inspire your next meal.</p>
+    <p>✨ Subscribe for weekly recipes and never miss a tasty update!</p>
+    <a href="/About.html" class="card-btn">Read more</a>
+    </article>
+    </section>
+    <footer>
+        <div class="footer-content"></div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" class="icon icon-instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com" class="icon icon-youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com" class="icon icon-facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <p class="copyright">&copy; 2025 Caparico. All rights reserved.</p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+       const darkBtn = document.getElementById("darktoggle");
+
+      if (localStorage.getItem("theme") ==="dark") {
+        document.documentElement.classList.add("dark");
+        darkBtn.textContent = "☀️ Light Mode";
+      }
+
+       darkBtn.onclick = function() {
+            document.documentElement.classList.toggle("dark");
+
+          if ( document.documentElement.classList.contains("dark")) {
+            darkBtn.textContent = "☀️ Light Mode";
+            localStorage.setItem("theme","dark");
+          } else {
+            darkBtn.textContent = "🌙 Dark Mode";
+            localStorage.setItem("theme","light");
+          }
+        };
+    </script>
+</body>
+</html>

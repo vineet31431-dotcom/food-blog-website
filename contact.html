@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caparico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/food logo.png" alt="caparico logo">
+                Caparico
+            </div>
+        
+        <!--navlinks-->
+        <nav>
+            
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipes.html">recipes</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <button id="darktoggle">🌙 Dark Mode</button>
+        </ul>
+        <div class="hamburger"><i class="fa fa-bars"></i></div>
+        
+    </nav>
+    </div>
+    </header>
+    <div class="page-title-section">
+        <h1>Get in touch</h1>
+        <p>we'd love to hear from you! Fill the form below or reach us directly.</p>
+    </div>
+    <div class="contact-form">
+    <div class="form-group">
+        <Label for="name">name:</Label>
+            <input id="name" type="text" placeholder="your name"></input>
+            </div>
+
+            <div class="form-group">
+            <label for="email">email:</label>
+            <input id="email" type="email" placeholder="email"></input>
+             </div>
+
+             <div class="form-group">
+        <label for="message">your message:</label>
+            <textarea id="message" placeholder="Write your message"></textarea>
+            </div>
+       
+            <div class="form-group button-group"><button class="submit-btn" type="submit">Send message</button>
+            </div>
+            
+    </div>
+    <div class="contact-info">
+    <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+911234567890">+91 12345 67890</a>
+    </div>
+    <div class="contact-item">
+       <i class="fa-solid fa-envelope"></i>
+       <a href="mailto:hello@caparico.com">hello@caparico.com</a>
+    </div>
+    </div>
+    <footer>
+    <div class="contact-social-icons">
+        <h4>our social media handles:</h4>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" class="icon icon-instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com" class="icon icon-youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com" class="icon icon-facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+<script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+       const darkBtn = document.getElementById("darktoggle");
+
+      if (localStorage.getItem("theme") ==="dark") {
+        document.documentElement.classList.add("dark");
+        darkBtn.textContent = "☀️ Light Mode";
+      }
+
+       darkBtn.onclick = function() {
+            document.documentElement.classList.toggle("dark");
+
+          if ( document.documentElement.classList.contains("dark")) {
+            darkBtn.textContent = "☀️ Light Mode";
+            localStorage.setItem("theme","dark");
+          } else {
+            darkBtn.textContent = "🌙 Dark Mode";
+            localStorage.setItem("theme","light");
+          }
+        };
+    </script>
+</body>
+</html>

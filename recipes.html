@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>recipes</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/food logo.png" alt="caparico logo">
+            Caparico
+        </div>
+        <div class="search-bar">
+    <input type="text" placeholder="Search recipes...">
+    <button>
+        <span class="btn-text">Search</span>
+        <span class="btn-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </button>
+    </div>
+        <!--navlinks-->
+        <ul class="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="recipes.html" class="active">recipes</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button id="darktoggle">🌙 Dark Mode</button></li>
+        </ul>
+        
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    <div class="hero-section">
+    <h1>Our recipes</h1>
+    <h3>Handpicked dishes with love and flavor.</h3>
+    <p class="hero-p">Discover delicious dishes for every occasion.</p>
+    </div>
+    <ul class="filter-section">
+        <button>All</button>
+        <button>Indian</button>
+        <button>Veg</button>
+        <button>Non-veg</button>
+    </ul>
+    <section class="all-recipes">
+    <h2 class="recipe-intro">All Recipes</h2>
+    <div class="recipe-grid">
+        <article class="recipes-card">
+            <img src="https://www.maggi.in//sites/default/files/srh_recipes/eb6c6566a4dc1e241ec7231984265d61.jpg" alt="dal Makhani" loading="lazy">
+            <h3>Dal Makhani</h3>
+            <p>Rich and creamy lentil curry</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+        <article class="recipes-card">
+            <img src="https://media.istockphoto.com/id/1305516669/photo/shahi-paneer-or-paneer-kadai.jpg?s=612x612&w=0&k=20&c=DO--pEfzfOdpResHc3m4JJQVSvHrNtK58zbC4xl4yaU=" alt="Paneer Butter Masala" loading="lazy">
+            <h3>Paneer Butter Masala</h3>
+            <p>Creamy tomato-based paneer curry</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+        <article class="recipes-card">
+            <img src="https://as2.ftcdn.net/jpg/05/53/98/35/1000_F_553983512_dcRWZkYhYXyZWId477A6z1uSxYeMBiPs.jpg" alt="Chole Bhature" loading="lazy">
+            <h3>Chole Bhature</h3>
+            <p>Spicy chickpea curry with fried bread</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+        <article class="recipes-card">
+            <img src="https://www.shutterstock.com/image-photo/aloo-gobi-traditional-indian-dish-600nw-2252685973.jpg" alt="Aloo Gobi" loading="lazy">
+            <h3>Aloo Gobi</h3>
+            <p>Potato and cauliflower curry</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+        <article class="recipes-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGB1tZ115HdaFxkxQBXGkO7ImT1Nzu55IvYA&s" alt="Butter Chicken" loading="lazy">
+            <h3>Butter Chicken</h3>
+            <p>Rich and creamy chicken curry</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+        <article class="recipes-card"> 
+            <img src="https://t4.ftcdn.net/jpg/05/70/58/65/360_F_570586537_TnIgWdCnaTYpgg9gsTyloz5bnvfCtdLl.jpg" alt="Veg Biryani" loading="lazy">
+            <h3>Veg Biryani</h3>
+            <p>Fragrant rice dish with mixed vegetables</p>
+            <a href="#" class="card-btn">view recipe</a>
+        </article>
+    </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script> 
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const darkBtn = document.getElementById("darktoggle")
+   
+        //hamburger menu //
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+       // dark mode logic //
+
+        if (localStorage.getItem("theme") ==="dark") {
+           document.documentElement.classList.add("dark");
+           if(darkBtn) darkBtn.textContent ="☀️ Light Mode"
+        }
+  
+        if (darkBtn) {
+        darkBtn.addEventListener('click', () => {
+       document.documentElement.classList.toggle("dark");
+
+       if(document.documentElement.classList.contains("dark")) {
+        darkBtn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme","dark");
+       }  else {
+        darkBtn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme","light");
+       }
+    });
+}
+    </script>
+</body>
+</html>
