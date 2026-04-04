@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Food Blog Website
 
 A simple food blog website built using HTML, CSS and JavaScript.a
@@ -35,3 +36,7 @@ https://vineet31431-dotcom.github.io/food-blog-website
 ## Author
 
 Vineet
+=======
+# food-blog-website
+simple food blog website 
+>>>>>>> 3eb63368bfe5fa0db31e36eacc6599541bb49a74
