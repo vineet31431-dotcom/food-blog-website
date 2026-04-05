@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # Food Blog Website
 
-A simple food blog website built using HTML, CSS and JavaScript.a
+A simple food blog website built using HTML, CSS and JavaScript.
 
 ## Features
 
